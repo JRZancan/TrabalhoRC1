@@ -1,4 +1,15 @@
 inicio
+/* 
+    --Projeto: Lei de Ohm
+    --Objetivo: O programa consiste em uma calculadora baseada na Lei de Ohm, onde o usu√°rio pode escolher qual vari√°vel deseja obter o resultado (Resist√™ncia, Corrente ou Tens√£o) e informar as outras duas vari√°veis para que o calculo seja efetuado.
+    --Integrantes:
+        Igor Henrique Silva Fernandes - 2017.2.25.092
+        Jos√© Lucio Zancan Junior - 2017.2.25.095
+        Luiz Gustavo Sassaron de Lima - 2017.2.25.106
+        Mariana Cunha S Dias - 2017.2.25.107
+        Mateus Antenor Matarazo de Sousa - 2017.2.5.108
+        Simone Ap Santos - 2016.2.25.127
+*/
     variavel inteiro opcao
     variavel real tensao
     variavel real corrente
@@ -6,40 +17,40 @@ inicio
     variavel real pot
     
     escrever "Informe o que deseja calcular:\n"
-    escrever "(1) Tens„o\n"
+    escrever "(1) Tens√£o\n"
     escrever "(2) Corrente\n"
-    escrever "(3) ResistÍncia\n"
+    escrever "(3) Resist√™ncia\n"
 
     ler opcao
     
-    se opcao = 1 ent„o
+    se opcao = 1 ent√£o
         escrever "Informe a corrente\n"
         ler corrente
-        escrever "Informe a resistÍncia\n"
+        escrever "Informe a resist√™ncia\n"
         ler resistencia
         
         tensao <- corrente * resistencia
         pot <- (corrente * corrente) * resistencia 
         
-        escrever "A tens„o È de ", tensao, "V\n"
+        escrever "A tens√£o √© de ", tensao, "V\n"
         escrever "A ", pot, "W\n"
     fimse    
     
-    se opcao = 2 ent„o
-        escrever "Informe a tens„o\n"
+    se opcao = 2 ent√£o
+        escrever "Informe a tens√£o\n"
         ler tensao
-        escrever "Informe a resistÍncia\n"
+        escrever "Informe a resist√™ncia\n"
         ler resistencia
         
         corrente <- tensao / resistencia
         pot <- (tensao * tensao) / resistencia
         
-        escrever "A corrente È de ", corrente, "A\n"
+        escrever "A corrente √© de ", corrente, "A\n"
         escrever "A ", pot, "W\n"
     fimse
     
-    se opcao = 3 ent„o
-        escrever "Informe a tens„o\n"
+    se opcao = 3 ent√£o
+        escrever "Informe a tens√£o\n"
         ler tensao
         escrever "Informe a corrente\n"
         ler corrente
@@ -47,12 +58,11 @@ inicio
         resistencia <- tensao / corrente
         pot <- tensao * corrente
         
-        escrever "A resistencia È de ", resistencia, "ohms\n"
+        escrever "A resistencia √© de ", resistencia, "ohms\n"
         escrever "A ", pot, "W\n"
     fimse
     
-    se opcao > 3 OU opcao = 0 ent„o
-        escrever "OpÁ„o inv·lida\n"
+    se opcao > 3 OU opcao = 0 ent√£o
+        escrever "Op√ß√£o inv√°lida\n"
     fimse
 fim
-    
